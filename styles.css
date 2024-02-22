@@ -1,0 +1,125 @@
+* {
+    background-color: black;
+    color: gold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+    font-size: clamp(2rem, 2.3rem, 3rem);
+    margin-bottom: 0px;
+}
+
+h2 {
+    font-size: clamp(1.3rem, 1.5rem, 2rem);
+}
+
+h3 {
+    font-size: clamp(1rem, 1.5rem, 1.8rem);
+}
+
+hr {
+    overflow: hidden;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+    background-color: gold;
+    border: none;
+    height: 0.6rem;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+#movieCarouselWrapper {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+    margin-bottom: -5px;
+}
+
+#movieCarouselWrapper:after,
+#movieCarouselWrapper:before {
+    position: absolute;
+    top: 0;
+    width: clamp(2rem, 9vw, 25rem); 
+    height: 100%;
+    content: '';
+    z-index: 2;
+}
+
+#movieCarouselWrapper:before {
+    left: 0;
+    background: linear-gradient(to left, transparent, gold);
+}
+
+#movieCarouselWrapper:after {
+    right: 0;
+    background: linear-gradient(to right, transparent, gold);
+}
+
+#movieCarouselWrapper:hover .carousel {
+    animation-play-state: paused;
+}
+
+.carousel {
+    display: inline-block;
+    animation: 100s scroll infinite;
+    margin-right: -0.6rem;
+}
+
+.moviePoster {
+    width: clamp(10rem, 14vw, 25rem); 
+    height: clamp(16rem, 45vh, 50rem);
+    margin-right: clamp(0.625rem, 0.9vw, 12rem); 
+    border: 0.3rem solid gold;
+}
+
+li {
+    margin-bottom: 10px; 
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    background: none;
+    color: gold;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+a {
+    font-size: clamp(1.2rem, 1.8vw, 25rem);
+}
+
+input {
+    appearance: none;
+	border: none;
+	outline: none;
+	border-bottom: .2em solid gold;
+	background: rgb(255, 215, 0, 0.10);
+	border-radius: .2em .2em 0 0;
+	padding: .4em;
+	color: gold;
+    font-size: 1.3vw;
+}
+
+iframe{
+    width: 600px;
+    height: 350px;
+}
+
+.iframeDiv{
+    display: flex;
+    align-items: center;
+}

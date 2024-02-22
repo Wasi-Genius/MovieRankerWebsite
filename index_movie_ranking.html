@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ranking</title>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <div>
+        <h1>Movie Ranker</h1>
+        <h2>Rank Your Movies</h2>
+    </div>
+
+    <hr>
+
+    <div id="movieCarouselWrapper">
+        <div class="carousel">
+        </div>
+        <div class="carousel">
+        </div>
+    </div>
+    
+    <hr>
+
+    <div>
+        <form autocomplete="off">
+            <h3>How many movies would you like to rank? <span><input autocomplete="off" type="number" id="randomID"></span></h3>
+        </form>
+        <a id='findMovieNameLink' target="_blank" href="https://www.whatismymovie.com/" class="hidden">Can't remember the title of your movie?</a>
+    </div>
+
+    <div>
+        <form autocomplete="off">
+            <ol>
+            </ol>
+            <datalist id="movieOptions"></datalist>
+        </form>
+    </div>
+
+    <div>
+        <button onclick="shareFunction()">Share your ranking!</button>
+    </div>
+
+    <hr>
+
+    <div>
+        <footer> &copy; Wasi Genius <span></span> </footer>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
+
+ 
